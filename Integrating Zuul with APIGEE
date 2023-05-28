@@ -1,0 +1,17 @@
+===============Zuul Integration with APIGEE =========================
+
+Use zuul as an API proxy, but integrate with Apigee for API Management. As you will be aware, zuul has the concept of plugins. You can write an "Apigee" plugin. So, what would this plugin do?
+
+This Apigee plugin can provide features like: analytics, oauth or api key verification and quota.
+
+What does Apigee bring to the table?
+
+Here are some reasons:
+
+1) Apigee provides a API developer portal. The portal serves two purposes - it is a human readable API Catalog. Consumers can search, find and very importantly, try APIs. And second, it providers an interface for API Consumer key management. API Consumers can request access to APIs, which when approved, will generate a key and secret for the consumer. The keys can be managed (expired, revoked, tracked etc.).
+
+2) Enforce API Entitlement (security): OAuth and API Keys in Apigee are tied to API Products. API Products are a logical grouping of 1 or more APIs. So each time an OAuth token or API Key is verified, the user's entitlement (i.e., which API they can access) is also verified.
+
+3) Analytics: This is many parts to it. There is data which operators need (errors, TPS, latency etc.). Then there is data which business users need. Which applications are accessing my APIs? How are these applications using the API? etc. Apigee can provide both kinds of analytics. You can even get some analytics based on the payload of your API calls.
+
+Regardless of which option (or a third one), NetFlix OSS can complement Apigee.
